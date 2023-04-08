@@ -1,31 +1,24 @@
 import './globals.css';
 
-import Nav from './nav';
+import CloudScape from './(CloudScape)/layout';
+
 import AnalyticsWrapper from './analytics';
-import Toast from './toast';
-import { Suspense } from 'react';
+
 
 export const metadata = {
-  title: 'Next.js 13 + PlanetScale + NextAuth + Tailwind CSS',
+  title: 'Evony TKR Tips',
   description:
-    'A user admin dashboard configured with Next.js, PlanetScale, NextAuth, Tailwind CSS, TypeScript, ESLint, and Prettier.'
+    'Tips for Budget Gamers'
 };
 
-export default async function RootLayout({
-  children
-}: {
-  children: React.ReactNode;
-}) {
+export default async function RootLayout({children}: {children: React.ReactNode;}) {
   return (
     <html lang="en" className="h-full bg-gray-50">
       <body className="h-full">
-        <Suspense fallback="...">
-          {/* @ts-expect-error Server Component */}
-          <Nav />
-        </Suspense>
-        {children}
+        <CloudScape>
+          {children}
+        </CloudScape>
         <AnalyticsWrapper />
-        <Toast />
       </body>
     </html>
   );
