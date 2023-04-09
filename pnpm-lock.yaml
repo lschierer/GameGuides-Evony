@@ -28,15 +28,18 @@ dependencies:
   '@react-spectrum/overlays':
     specifier: ^5.1.0
     version: 5.1.0(@react-spectrum/provider@3.7.1)(react-dom@18.2.0)(react@18.2.0)
-  '@react-spectrum/utils':
-    specifier: ^3.9.1
-    version: 3.9.1(react@18.2.0)
   '@react-spectrum/view':
     specifier: ^3.5.1
     version: 3.5.1(@react-spectrum/provider@3.7.1)(react@18.2.0)
   '@react-types/shared':
     specifier: ^3.18.0
     version: 3.18.0(react@18.2.0)
+  '@spectrum-css/sidenav':
+    specifier: ^3.0.37
+    version: 3.0.37(@spectrum-css/vars@9.0.0)
+  '@spectrum-css/typography':
+    specifier: ^4.0.30
+    version: 4.0.30(@spectrum-css/vars@9.0.0)
   '@tremor/react':
     specifier: ^2.1.0
     version: 2.1.0(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
@@ -102,6 +105,18 @@ devDependencies:
   '@adobe/react-spectrum-ui':
     specifier: ^1.2.0
     version: 1.2.0(react-dom@18.2.0)(react@18.2.0)
+  '@react-spectrum/utils':
+    specifier: ^3.9.1
+    version: 3.9.1(react@18.2.0)
+  '@spectrum-css/button':
+    specifier: ^9.0.14
+    version: 9.0.14(@spectrum-css/tokens@8.0.2)
+  '@spectrum-css/page':
+    specifier: ^5.0.20
+    version: 5.0.20
+  '@spectrum-css/vars':
+    specifier: ^9.0.0
+    version: 9.0.0
   '@types/node':
     specifier: ^18.15.11
     version: 18.15.11
@@ -2147,13 +2162,11 @@ packages:
     dependencies:
       '@formatjs/intl-localematcher': 0.2.32
       tslib: 2.5.0
-    dev: false
 
   /@formatjs/fast-memoize@2.0.1:
     resolution: {integrity: sha512-M2GgV+qJn5WJQAYewz7q2Cdl6fobQa69S1AzSM2y0P68ZDbK5cWrJIcPCO395Of1ksftGZoOt4LYCO/j9BKBSA==}
     dependencies:
       tslib: 2.5.0
-    dev: false
 
   /@formatjs/icu-messageformat-parser@2.3.0:
     resolution: {integrity: sha512-xqtlqYAbfJDF4b6e4O828LBNOWXrFcuYadqAbYORlDRwhyJ2bH+xpUBPldZbzRGUN2mxlZ4Ykhm7jvERtmI8NQ==}
@@ -2161,20 +2174,17 @@ packages:
       '@formatjs/ecma402-abstract': 1.14.3
       '@formatjs/icu-skeleton-parser': 1.3.18
       tslib: 2.5.0
-    dev: false
 
   /@formatjs/icu-skeleton-parser@1.3.18:
     resolution: {integrity: sha512-ND1ZkZfmLPcHjAH1sVpkpQxA+QYfOX3py3SjKWMUVGDow18gZ0WPqz3F+pJLYQMpS2LnnQ5zYR2jPVYTbRwMpg==}
     dependencies:
       '@formatjs/ecma402-abstract': 1.14.3
       tslib: 2.5.0
-    dev: false
 
   /@formatjs/intl-localematcher@0.2.32:
     resolution: {integrity: sha512-k/MEBstff4sttohyEpXxCmC3MqbUn9VvHGlZ8fauLzkbwXmVrEeyzS+4uhrvAk9DWU9/7otYWxyDox4nT/KVLQ==}
     dependencies:
       tslib: 2.5.0
-    dev: false
 
   /@headlessui/react@1.7.13(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-9n+EQKRtD9266xIHXdY5MfiXPDfYwl7zBM7KOx2Ae3Gdgxy8QML1FkCMjq6AsOf0l6N9uvI4HcFtuFlenaldKg==}
@@ -2233,26 +2243,22 @@ packages:
     resolution: {integrity: sha512-VDMHN1m33L4eqPs5BaihzgQJXyaORbMoHOtrapFxx179J8ucY5CRIHYsq5RRLKPHZWgjNfa5v6amWWDkkMFywA==}
     dependencies:
       '@swc/helpers': 0.4.14
-    dev: false
 
   /@internationalized/message@3.1.0:
     resolution: {integrity: sha512-Oo5m70FcBdADf7G8NkUffVSfuCdeAYVfsvNjZDi9ELpjvkc4YNJVTHt/NyTI9K7FgAVoELxiP9YmN0sJ+HNHYQ==}
     dependencies:
       '@swc/helpers': 0.4.14
       intl-messageformat: 10.3.3
-    dev: false
 
   /@internationalized/number@3.2.0:
     resolution: {integrity: sha512-GUXkhXSX1Ee2RURnzl+47uvbOxnlMnvP9Er+QePTjDjOPWuunmLKlEkYkEcLiiJp7y4l9QxGDLOlVr8m69LS5w==}
     dependencies:
       '@swc/helpers': 0.4.14
-    dev: false
 
   /@internationalized/string@3.1.0:
     resolution: {integrity: sha512-TJQKiyUb+wyAfKF59UNeZ/kELMnkxyecnyPCnBI1ma4NaXReJW+7Cc2mObXAqraIBJUVv7rgI46RLKrLgi35ng==}
     dependencies:
       '@swc/helpers': 0.4.14
-    dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
@@ -2665,7 +2671,6 @@ packages:
       '@react-types/shared': 3.18.0(react@18.2.0)
       '@swc/helpers': 0.4.14
       react: 18.2.0
-    dev: false
 
   /@react-aria/interactions@3.15.0(react@18.2.0):
     resolution: {integrity: sha512-8br5uatPDISEWMINKGs7RhNPtqLhRsgwQsooaH7Jgxjs0LBlylODa8l7D3NA1uzVzlvfnZm/t2YN/y8ieRSDcQ==}
@@ -2946,7 +2951,6 @@ packages:
     dependencies:
       '@swc/helpers': 0.4.14
       react: 18.2.0
-    dev: false
 
   /@react-aria/switch@3.5.0(react@18.2.0):
     resolution: {integrity: sha512-nMrwT0McuQ7ki6rSDFIuf9qa9UjcA1XJQ9zDRD2CC10F48xpHHi12iZpS8GAEdG2jTNdCZ3qSO1HsIt63uEQoQ==}
@@ -3060,7 +3064,6 @@ packages:
       '@swc/helpers': 0.4.14
       clsx: 1.2.1
       react: 18.2.0
-    dev: false
 
   /@react-aria/virtualizer@3.8.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-5IWHio22fYWzlvmnistAQceJRVNHxOwmpSicl5xKR/Bl5I3uG6O4mrp9iOL7faRovKUpcvM6ydIDMsqEiBwQiA==}
@@ -4074,7 +4077,6 @@ packages:
       '@swc/helpers': 0.4.14
       clsx: 1.2.1
       react: 18.2.0
-    dev: false
 
   /@react-spectrum/view@3.5.1(@react-spectrum/provider@3.7.1)(react@18.2.0):
     resolution: {integrity: sha512-BagceFvXPoFLD9Kh7AlXEqMwCyMQL+mooG7+0rmjb6ZPSnaZIcNZKQb6wSkuVG0oyHhOsda/U2P76BkGzdHH3g==}
@@ -4410,7 +4412,6 @@ packages:
     dependencies:
       '@swc/helpers': 0.4.14
       react: 18.2.0
-    dev: false
 
   /@react-stately/virtualizer@3.5.1(react@18.2.0):
     resolution: {integrity: sha512-TVszEl8+os5eAwoETAJ0ndz5cnYFQs52OIcWonKRYbNp5KvWAV+OA2HuIrB3SSC29ZRB2bDqpj4S2LY4wWJPCw==}
@@ -4710,7 +4711,6 @@ packages:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
     dependencies:
       react: 18.2.0
-    dev: false
 
   /@react-types/slider@3.5.0(react@18.2.0):
     resolution: {integrity: sha512-ri0jGWt1x/+nWLLJmlRKaS0xyAjTE1UtsobEYotKkQjzG93WrsEZrb0tLmDnXyEfWi3NXyrReQcORveyv4EQ5g==}
@@ -4809,6 +4809,43 @@ packages:
     resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
     dev: true
 
+  /@spectrum-css/button@9.0.14(@spectrum-css/tokens@8.0.2):
+    resolution: {integrity: sha512-e3Hw8C45fKNHFVA8u2bFECwcSvxu7PL12/sKSo7tzt8LDhlCB2BFvoE2IA9U7KpA/A4nli+A4XIo5N6rEgGOjQ==}
+    peerDependencies:
+      '@spectrum-css/tokens': '>=8.0.0'
+    dependencies:
+      '@spectrum-css/tokens': 8.0.2
+    dev: true
+
+  /@spectrum-css/page@5.0.20:
+    resolution: {integrity: sha512-8xAtUY+iWeb1rgF4bNXt5UN1Cy4h55sgi0ldggmAgGWkjHUGKm0rGxatpgS4aN6c1SYCMRCtFHfupVJsR9Rung==}
+    dependencies:
+      '@spectrum-css/vars': 9.0.0
+    dev: true
+
+  /@spectrum-css/sidenav@3.0.37(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-+ZIsbYQYiZs+1f6fyF0WzI9RaI01FOUYRgDKorlhv2Y5eynT7V6tTLWEGEFonNn0burxW7ZuOAL7bT40kIvGFg==}
+    peerDependencies:
+      '@spectrum-css/vars': ^8.0.0
+    dependencies:
+      '@spectrum-css/vars': 9.0.0
+    dev: false
+
+  /@spectrum-css/tokens@8.0.2:
+    resolution: {integrity: sha512-sncY3HFH8cePzTugliB/HVjoy1akpoTiDT8+gdGmlfkGP/U1cnwsYj8sLT5XHjRIojv9XIqvsz4pzkIj+z7DKg==}
+    dev: true
+
+  /@spectrum-css/typography@4.0.30(@spectrum-css/vars@9.0.0):
+    resolution: {integrity: sha512-XFHfdIyeP9+1hc9lKh8jg945li+Zg2BY3gAo5sOusUrM8m0Xn4jIvQBjP6VeSRcs0ZBLGafozHZOogKGjFAXBA==}
+    peerDependencies:
+      '@spectrum-css/vars': ^8.0.0
+    dependencies:
+      '@spectrum-css/vars': 9.0.0
+    dev: false
+
+  /@spectrum-css/vars@9.0.0:
+    resolution: {integrity: sha512-VTtkZKqwqdK96GwxmlOFNkzlDbSShJeW7kg6tEiSpwJ+Pd5b/ukRA+bZ4AN/nF3cT2HvhlZI2pO8z0muYZ0pGA==}
+
   /@spectrum-icons/ui@3.5.1(@react-spectrum/provider@3.7.1)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-TvEx6WVX2MqFMD90QhYTfDd+dBaSo3jYJ7K6rddS+UqN6eXAdkVjXlWnWi0M0AU1V3nZ05SLwYlQGBx7k4NcmQ==}
     peerDependencies:
@@ -4843,7 +4880,6 @@ packages:
     resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
     dependencies:
       tslib: 2.5.0
-    dev: false
 
   /@tremor/react@2.1.0(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-LOJoJqK/H4eL13kxFkp/5CyZo6hjDGYpQxS/eAQxAqwv+d51CcrnS2GE+Cp3U5wTVZ1ve8sdYaa5kuOAEvxQyg==}
@@ -5777,7 +5813,6 @@ packages:
   /clsx@1.2.1:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
     engines: {node: '>=6'}
-    dev: false
 
   /cmake-js@6.3.2:
     resolution: {integrity: sha512-7MfiQ/ijzeE2kO+WFB9bv4QP5Dn2yVaAP2acFJr4NIFy2hT4w6O4EpOTLNcohR5IPX7M4wNf/5taIqMj7UA9ug==}
@@ -7359,7 +7394,6 @@ packages:
       '@formatjs/fast-memoize': 2.0.1
       '@formatjs/icu-messageformat-parser': 2.3.0
       tslib: 2.5.0
-    dev: false
 
   /invert-kv@1.0.0:
     resolution: {integrity: sha512-xgs2NH9AE66ucSq4cNG1nhSFghr5l6tdL15Pk+jl46bmmBapgoaY/AacXyaDznAqmGL99TiLSQgO/XazFSKYeQ==}
