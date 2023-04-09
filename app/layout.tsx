@@ -3,6 +3,7 @@ import './globals.css';
 import CloudScape from './(CloudScape)/layout';
 
 import AnalyticsWrapper from './analytics';
+import AdobeSpectrum from './(AdobeSpectrum)/layout';
 
 
 export const metadata = {
@@ -15,9 +16,9 @@ export default async function RootLayout({children}: {children: React.ReactNode;
   return (
     <html lang="en" className="h-full bg-gray-50">
       <body className="h-full">
-        <CloudScape>
+        <AdobeSpectrum>
           {children}
-        </CloudScape>
+        </AdobeSpectrum>
         <AnalyticsWrapper />
       </body>
     </html>

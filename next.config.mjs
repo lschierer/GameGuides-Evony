@@ -1,4 +1,5 @@
-const path = require('path');
+import * as path from 'path';
+import { fileURLToPath } from 'url';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -10,8 +11,10 @@ const nextConfig = {
     serverComponentsExternalPackages: ['@tremor/react']
   },
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  }
+    includePaths: [path.join('./', 'styles')],
+  },
+  reactStrictMode: true,
+
 };
 
-module.exports = nextConfig;
+export default nextConfig;
