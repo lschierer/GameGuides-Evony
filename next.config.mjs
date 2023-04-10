@@ -24,4 +24,11 @@ const nextConfig = {
 
 };
 
-export default withMDX(nextConfig);
+export default withMDX(nextConfig, {
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+    // If you use `MDXProvider`, uncomment the following line.
+    // providerImportSource: "@mdx-js/react",
+  }
+});
