@@ -1,13 +1,20 @@
 import * as path from 'path';
-import { fileURLToPath } from 'url';
+import mdx from '@next/mdx';
+
+const withMDX = mdx({
+
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['avatars.githubusercontent.com', 'avatar.vercel.sh']
+    domains: ['avatars.githubusercontent.com']
   },
+  pageExtensions: ['ts', 'tsx', 'mdx'],
   experimental: {
     appDir: true,
+    mdxRs: true,
+    typedRoutes: true,
     serverComponentsExternalPackages: ['@tremor/react']
   },
   sassOptions: {
@@ -17,4 +24,4 @@ const nextConfig = {
 
 };
 
-export default nextConfig;
+export default withMDX(nextConfig);
