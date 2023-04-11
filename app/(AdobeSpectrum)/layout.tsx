@@ -40,11 +40,25 @@ export default function AdobeSpectrum({ children }: { children: React.ReactNode;
                     'nav    content toc',
                     'nav    content toc',
                     'footer footer  footer'
+                  ],
+                  XL: [
+                    'header header  header gutter',
+                    'nav    content toc gutter',
+                    'nav    content toc gutter',
+                    'footer footer  footer gutter'
+                  ],
+                  XXL: [
+                    'header header  header gutter',
+                    'nav    content toc gutter',
+                    'nav    content toc gutter',
+                    'footer footer  footer gutter'
                   ]
                 }}
                 columns={{
-                  M: ['size-2000', '1fr'],
-                  L: ['size-2000', '1fr', 'size-2000']
+                  M: ['size-1700', '1fr', 'size-1700'],
+                  L: ['size-2000', '1fr', 'size-2000'],
+                  XL: ['size-2000', '2fr', 'size-2000','.5fr'],
+                  XXL: ['size-3000', '2fr', 'size-3000','1fr']
                 }}
                 gap='size-100'
               >
@@ -58,7 +72,7 @@ export default function AdobeSpectrum({ children }: { children: React.ReactNode;
                     direction={{ base: 'row', S: 'column', M: 'row', L: 'row'}}
                     gap='size-50'
                     margin='size-50'
-                    flex="auto"
+                    flex="none"
                     width="100%"
                     height="calc(100% - size-100)"
                   >
@@ -67,7 +81,8 @@ export default function AdobeSpectrum({ children }: { children: React.ReactNode;
                       backgroundColor="green-400"
                       width="1"
                       minWidth="size-100"
-                      flex={1}
+                      maxWidth="calc(25% - size-100)"
+                      flex='1 1 auto'
                     />
                     <View
                       colorVersion={6}
@@ -90,7 +105,8 @@ export default function AdobeSpectrum({ children }: { children: React.ReactNode;
                       backgroundColor="green-400"
                       width="1"
                       minWidth="size-100"
-                      flex={1}
+                      maxWidth="calc(25% - size-100)"
+                      flex='1 1 auto'
                     />
                   </Flex>
                 </View>
@@ -128,6 +144,8 @@ export default function AdobeSpectrum({ children }: { children: React.ReactNode;
                   colorVersion={6}
                   backgroundColor={"blue-100"}
                   height="size-4600"
+                  gridArea="content"
+                  flex={1}
                 >
                   {children}
                 </View>
@@ -136,7 +154,7 @@ export default function AdobeSpectrum({ children }: { children: React.ReactNode;
                   backgroundColor="magenta-600"
                   gridArea="toc"
                   minHeight="size-1000"
-                  isHidden={{ base: true, L: false }}
+                  isHidden={{ base: true, M: false, L: false }}
                 />
                 <View
                   colorVersion={6}

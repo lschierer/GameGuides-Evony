@@ -1,9 +1,5 @@
 import * as path from 'path';
-import mdx from '@next/mdx';
-
-const withMDX = mdx({
-
-});
+import { withContentlayer } from 'next-contentlayer';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -21,14 +17,6 @@ const nextConfig = {
     includePaths: [path.join('./', 'styles')],
   },
   reactStrictMode: true,
-
 };
 
-export default withMDX(nextConfig, {
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-    // If you use `MDXProvider`, uncomment the following line.
-    // providerImportSource: "@mdx-js/react",
-  }
-});
+export default withContentlayer(nextConfig);
