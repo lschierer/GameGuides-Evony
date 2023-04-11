@@ -61,6 +61,8 @@ export default function AdobeSpectrum({ children }: { children: React.ReactNode;
                   XXL: ['size-3000', '2fr', 'size-3000','1fr']
                 }}
                 gap='size-100'
+                height="100%"
+                width="100%"
               >
                 <View
                   colorVersion={6}
@@ -143,11 +145,13 @@ export default function AdobeSpectrum({ children }: { children: React.ReactNode;
                 <View
                   colorVersion={6}
                   backgroundColor={"blue-100"}
-                  height="size-4600"
+                  height="100%"
                   gridArea="content"
                   flex={1}
                 >
-                  {children}
+                  <main>
+                    {children}
+                  </main>
                 </View>
                 <View
                   colorVersion={6}
