@@ -10,7 +10,7 @@
   "dependencies": {
     "@adobe/react-spectrum": "^3.26.0",
     "@adobe/react-spectrum-workflow-color": "^1.1.0",
-    "@cloudscape-design/components": "^3.0.243",
+    "@cloudscape-design/components": "^3.0.244",
     "@cloudscape-design/design-tokens": "^3.0.10",
     "@cloudscape-design/global-styles": "^1.0.8",
     "@headlessui/react": "^1.7.13",
@@ -44,6 +44,10 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-pretty-code": "^0.9.4",
+    "rehype-slug": "^5.1.0",
+    "remark-gfm": "^3.0.1",
     "server-only": "^0.0.1",
     "typescript": "^5.0.4"
   },
@@ -56,7 +60,7 @@
   "devDependencies": {
     "@adobe/react-spectrum-ui": "^1.2.0",
     "@react-spectrum/utils": "^3.9.1",
-    "@spectrum-css/button": "^9.1.0",
+    "@spectrum-css/button": "^9.1.1",
     "@spectrum-css/page": "^5.0.20",
     "@spectrum-css/vars": "^9.0.0",
     "@types/mdx": "^2.0.4",
