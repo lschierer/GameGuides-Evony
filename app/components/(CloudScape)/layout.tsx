@@ -5,7 +5,7 @@
 import React, { useState } from 'react';
 
 import "@cloudscape-design/global-styles/index.css"
-import variables from '../variables.module.scss';
+import variables from '../../variables.module.scss';
 
 
 import AppLayout from '@cloudscape-design/components/app-layout';
@@ -19,7 +19,7 @@ import SpaceBetween from '@cloudscape-design/components/space-between';
 import TopNavigation from '@cloudscape-design/components/top-navigation';
 
 import { Notifications } from './notifications';
-import {navItems} from '../menu_items';
+import {navItems} from '../../menu_items';
 
 const breadcrumbs = [
   {

@@ -1,9 +1,6 @@
 import './globals.css';
-
-import CloudScape from './(CloudScape)/layout';
-
 import AnalyticsWrapper from './analytics';
-import AdobeSpectrum from './(AdobeSpectrum)/layout';
+import AdobeSpectrum from './components/(AdobeSpectrum)/layout';
 
 
 export const metadata = {
