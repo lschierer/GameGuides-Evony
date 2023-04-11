@@ -1,3 +1,8 @@
+---
+type: "Doc"
+title: "Evony TKR Tips"
+author: "Luke Schierer"
+---
 
 ### Tips for Budget Gamers
 
