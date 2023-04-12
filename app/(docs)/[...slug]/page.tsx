@@ -6,6 +6,7 @@ import { allDocs } from "contentlayer/generated";
 import { Metadata } from "next";
 
 import { Mdx } from "../../components/mdx";
+import { ReactElement } from 'react';
 
 export interface DocPageProps {
   params: {
@@ -70,16 +71,20 @@ export async function generateStaticParams() {
   return slugs;
 }
 
-export default async function ( params: DocPageProps) {
-  const doc = await getDocFromParams(params)
+export default async function(params: DocPageProps): Promise<ReactElement<any>> {
+  
+  const doc = await getDocFromParams(params);
 
   if (!doc) {
     notFound();
   }
 
   return (
-    <div >
-      <Mdx code={doc.body.code} />
-    </div>
+    <>
+      <div>
+        <Mdx code={doc.body.code} />
+      </div>
+    </>
+
   );
-}
+};
