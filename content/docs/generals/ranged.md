@@ -1,16 +1,18 @@
-+++
-title = "Picking your first ranged pair"
-author = "Luke Schierer"
-weight = 3
-tags = ['recommendation']
-+++
+---
+type: 'Doc'
+title: "Picking your first ranged pair"
+author: "Luke Schierer"
+weight: 3
+tags: 
+  - 'recommendation'
+---
 
 In the [Overview][], I explain my thinking.  This is a fairly long article, but
 contains a lot of useful background information if you want to understand how I
 arrived at these conclusions. If you just want to be told what to do, you can
 skip it and dive right in here. 
 
-[Overview]: <{{< relref "overview.md" >}}>
+[Overview]: <overview>
 
 ### For Free to Play Players:
 

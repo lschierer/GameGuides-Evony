@@ -12,7 +12,7 @@ contains a lot of useful background information if you want to understand how I
 arrived at these conclusions. If you just want to be told what to do, you can
 skip it and dive right in here. 
 
-[Overview]: <"overview.md">
+[Overview]: <overview>
 
 ## For Free to Play Players:
 
@@ -45,7 +45,7 @@ give him a dragon.  Since you won't have two dragons until level 30, I dislike
 this approach.  Roland is useful far sooner, and saves your (red) Celtic dragon
 for your [ranged][] march.
 
-[ranged]: <"ranged">
+[ranged]: <ranged>
 
 ### For PvP Assistant:
 * As a FTP or light spending player, I strongly recommend that Mounted not
