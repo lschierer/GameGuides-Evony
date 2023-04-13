@@ -48,34 +48,41 @@ export default function AdobeSpectrum({ children }: { children: React.ReactNode;
                     'footer footer  footer gutter'
                   ],
                   XXL: [
-                    'header header  header gutter',
-                    'nav    content toc gutter',
-                    'nav    content toc gutter',
-                    'footer footer  footer gutter'
+                    'header header  header',
+                    'nav    content toc',
+                    'nav    content toc',
+                    'footer footer  footer'
                   ]
                 }}
                 columns={{
                   M: ['size-1700', '1fr', 'size-1700'],
                   L: ['size-2000', '1fr', 'size-2000'],
-                  XL: ['size-2000', '2fr', 'size-2000','.5fr'],
-                  XXL: ['size-3000', '2fr', 'size-3000','1fr']
+                  XL: ['size-2000', '2fr', 'size-2000'],
+                  XXL: ['size-3000', '2fr', 'size-3000']
                 }}
                 gap='size-100'
                 height="100%"
-                width="100%"
+                maxWidth={{
+                  M: "100%",
+                  L: "calc(size-6000 * 3)",
+                  XL: "calc(size-6000 * 3)",
+                  XXL: "calc(size-6000 * 3)"
+                }}
+
               >
                 <View
                   colorVersion={6}
                   backgroundColor="cyan-800"
                   gridArea="header"
                   height="size-1000"
+                  width="100%"
                 >
                   <Flex
                     direction={{ base: 'row', S: 'column', M: 'row', L: 'row'}}
                     gap='size-50'
                     margin='size-50'
                     flex="none"
-                    width="100%"
+                    width="calc(100% - size-100)"
                     height="calc(100% - size-100)"
                   >
                     <View
