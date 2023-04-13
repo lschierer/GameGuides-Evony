@@ -1,28 +1,26 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { notFound } from "next/navigation";
-import { allDocs } from "contentlayer/generated";
+import { Doc,allDocs } from "contentlayer/generated";
 
 import { Metadata } from "next";
 
 import { Mdx } from "../../components/mdx";
 import { ReactElement } from 'react';
 
-export interface DocPageProps {
-  params: {
-    slug: string[]
-  }
-}
 
-async function getDocFromParams(DPP: DocPageProps) {
-  const slug = DPP.params.slug?.join("/") || ""
-  const doc = allDocs.find((doc) => doc.slugAsParams === slug)
-
-  if (!doc) {
-    null
+async function getDocFromParams(DPP: {
+  params: { slug: string[] };
+}) {
+  const slug = DPP.params.slug?.join("/") || "";
+  let doc: Doc|undefined;
+  if ((slug === "/") || (slug === "")){
+    doc = allDocs.find((doc) => doc.slugAsParams === "index")
+  } else {
+    doc = allDocs.find((doc) => doc.slugAsParams === slug);
   }
 
-  return doc
+  return doc;
 }
 
 /*
@@ -71,11 +69,14 @@ export async function generateStaticParams() {
   return slugs;
 }
 
-export default async function(params: DocPageProps): Promise<ReactElement<any>> {
-  
-  const doc = await getDocFromParams(params);
+export default async function Page({
+                               params,
+                             }: {
+  params: { slug: string[] };
+}): Promise<ReactElement<any>> {
+  const doc = await getDocFromParams({params});
 
-  if (!doc) {
+  if ((!doc) || (doc === undefined)) {
     notFound();
   }
 

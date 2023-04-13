@@ -8,6 +8,7 @@ const nextConfig = {
     domains: ['avatars.githubusercontent.com']
   },
   experimental: {
+    typedRoutes: true,
     appDir: true,
   },
   sassOptions: {
