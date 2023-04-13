@@ -10,8 +10,6 @@
   "dependencies": {
     "@adobe/react-spectrum": "^3.26.0",
     "@adobe/react-spectrum-workflow-color": "^1.1.0",
-    "@cloudscape-design/components": "^3.0.244",
-    "@cloudscape-design/design-tokens": "^3.0.10",
     "@cloudscape-design/global-styles": "^1.0.8",
     "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^2.0.17",
