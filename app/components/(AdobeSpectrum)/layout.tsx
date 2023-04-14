@@ -61,7 +61,8 @@ export default function AdobeSpectrum({ children }: { children: React.ReactNode;
                   XXL: ['size-3000', '2fr', 'size-3000']
                 }}
                 gap='size-100'
-                height="100%"
+                minHeight="size-6000"
+                maxHeight="100%"
                 maxWidth={{
                   M: "100%",
                   L: "calc(size-6000 * 3)",
@@ -102,11 +103,9 @@ export default function AdobeSpectrum({ children }: { children: React.ReactNode;
                       alignSelf="center"
                     >
                       <Header >
-
                           <h1 className="spectrum-Heading spectrum-Heading--sizeXXXL">
                             Evony TKR Tips
                           </h1>
-
                       </Header>
                     </View>
                     <View
@@ -152,7 +151,8 @@ export default function AdobeSpectrum({ children }: { children: React.ReactNode;
                 <View
                   colorVersion={6}
                   backgroundColor={"blue-100"}
-                  height="100%"
+                  minHeight="size-4600"
+                  maxHeight="100%"
                   gridArea="content"
                   flex={1}
                 >
