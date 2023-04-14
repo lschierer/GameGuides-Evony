@@ -51,6 +51,7 @@
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
     "server-only": "^0.0.1",
+    "turbo": "^1.9.1",
     "typescript": "^5.0.4"
   },
   "prettier": {
