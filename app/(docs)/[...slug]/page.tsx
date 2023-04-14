@@ -3,11 +3,15 @@ import Link from 'next/link'
 import { notFound } from "next/navigation";
 import { Doc,allDocs } from "contentlayer/generated";
 
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 
 import { Mdx } from "../../components/mdx";
 import { ReactElement } from 'react';
 
+type Props = {
+  params: { slug: string[] };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
 
 async function getDocFromParams(DPP: {
   params: { slug: string[] };
@@ -23,43 +27,25 @@ async function getDocFromParams(DPP: {
   return doc;
 }
 
-/*
-export async function generateMetadata( DPP: DocPageProps ): Promise<Metadata> {
 
+export async function generateMetadata(
+  { params, searchParams }: Props
+):Promise<Metadata|undefined> {
 
-  const doc = await getDocFromParams(DPP);
+  const slug = params.slug;
+  const doc = await getDocFromParams({params: { slug }});
 
-  if (!doc) {
+  if ((!doc) || (doc === undefined)) {
     return {}
-  }
-
-  const url = process.env.NEXT_PUBLIC_APP_URL
-
-  const ogUrl = new URL(`${url}/api/og`)
-  ogUrl.searchParams.set("heading", doc.description ?? doc.title)
-  ogUrl.searchParams.set("type", "Documentation")
-  ogUrl.searchParams.set("mode", "light")
-
-  return {
-    title: doc.title,
-    description: doc.description,
-    openGraph: {
+  } else {
+    return {
       title: doc.title,
       description: doc.description,
-      type: "article",
-      url: absoluteUrl(doc.slug),
-      images: [
-        {
-          url: ogUrl.toString(),
-          width: 1200,
-          height: 630,
-          alt: doc.title,
-        },
-      ],
-    },
+
+    };
   }
 }
-*/
+
 
 export async function generateStaticParams() {
   let slugs =  allDocs.map((doc) => ({

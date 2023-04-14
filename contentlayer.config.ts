@@ -19,6 +19,9 @@ export const Doc = defineDocumentType(() => ({
       type: "boolean",
       default: true,
     },
+    author: {
+      type: "string",
+    }
   },
   computedFields: {
     slug: {
@@ -50,7 +53,6 @@ export const Author = defineDocumentType(() => ({
     },
     twitter: {
       type: "string",
-      required: true,
     },
   },
   computedFields: {
